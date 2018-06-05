@@ -1,15 +1,18 @@
 from libcpp.string cimport string
+from cython.operator cimport dereference as deref
 
-cdef extern from '<sstream>' namespace 'std' nogil:
-    cppclass stringbuf:
-        stringbuf() except +
-        void str(const string&) except +
+cdef extern from "<iostream>" namespace "std":
+    cdef cppclass istream:
+        pass
+    cdef cppclass istringstream(istream):
+        istringstream(char*)
 
 cdef extern from 'process.hpp':
-    unsigned char process(stringbuf &)
+    unsigned char process(istringstream &)
 
-a = b"1234"
-cdef stringbuf c;
-c.str(a)
-b = process(c)
-print(b)
+with open('internal.0', 'rb') as f:
+    a = f.read()
+
+cdef istringstream *c = new istringstream(a)
+b = process(deref(c))
+print(chr(b))
