@@ -7,10 +7,11 @@ I made this repo to test the approach before digging into `khmer`, which is
 way more complex than this PoC =]
 
 More refs:
-http://www.cplusplus.com/reference/sstream/istringstream/rdbuf/
-https://stackoverflow.com/questions/44978420/how-to-get-sfmls-error-message-to-cython
-https://github.com/capnproto/pycapnp/pull/163/files
-https://stackoverflow.com/questions/7781898/get-an-istream-from-a-char/7781958#7781958
+- http://www.cplusplus.com/reference/sstream/istringstream/rdbuf/
+- https://stackoverflow.com/questions/44978420/how-to-get-sfmls-error-message-to-cython
+- https://github.com/capnproto/pycapnp/pull/163/files
+- https://stackoverflow.com/questions/7781898/get-an-istream-from-a-char/7781958#7781958
+- https://stackoverflow.com/questions/30984078/cython-working-with-c-streams
 
 [0]: https://github.com/dib-lab/sourmash
 [1]: https://github.com/dib-lab/sourmash
